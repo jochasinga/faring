@@ -3,9 +3,9 @@
 import Alpine from 'alpinejs'
 
 // If you abstracted your Alpine component logic, you'd import that here
-import widget from './widget.js'
+// import widget from './widget.js'
 
-import widgetHTML from './..widget.html'
+import widgetHTML from './../widget.html'
 
 const initAlpine = () => {
   window.Alpine = Alpine
@@ -13,3 +13,5 @@ const initAlpine = () => {
 
   document.getElementById("app").innerHTML = widgetHTML
 }
+
+export default initAlpine
