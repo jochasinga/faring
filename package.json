@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "alpine": "^0.2.1",
-    "alpinejs": "^3.10.2",
-  },
+    "alpinejs": "^3.10.2"
+  }
 
 }
