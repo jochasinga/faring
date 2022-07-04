@@ -2975,7 +2975,7 @@ var injectCSS = function injectCSS() {
   var link = document.createElement('link');
   link.type = "text/css";
   link.rel = "stylesheet"; // if (process.env.NODE_ENV == 'production') {
-  //   link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring@1.0/dist/styles.css"
+  //   link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring/dist/styles.css"
   // } else {
   //   link.href = "./../dist/styles.css"
   // }
@@ -2996,16 +2996,16 @@ var injectCSS = function injectCSS() {
 /***/ ((module) => {
 
 // Module
-var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
+var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'button is-primary' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
 // Exports
 module.exports = code;
 
 /***/ }),
 
-/***/ "./src/styles.css":
-/*!************************!*\
-  !*** ./src/styles.css ***!
-  \************************/
+/***/ "./src/styles.scss":
+/*!*************************!*\
+  !*** ./src/styles.scss ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3177,7 +3177,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["styles"], () => (__webpack_require__("./src/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["styles"], () => (__webpack_require__("./src/styles.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["styles"], () => (__webpack_require__("./src/styles.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

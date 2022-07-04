@@ -1,5 +1,5 @@
 <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 <div x-data="{ open: false }">
-  <button :class="true ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' : ''" @click="open = !open">Toggle</button>
+  <button :class="true ? 'button is-primary' : ''" @click="open = !open">Toggle</button>
   <p x-show="open" @click.outside="open = false">Some content...</p>
 </div>
