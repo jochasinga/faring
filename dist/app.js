@@ -2996,16 +2996,16 @@ var injectCSS = function injectCSS() {
 /***/ ((module) => {
 
 // Module
-var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'button is-primary' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
+var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'bg-white rounded-xl' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
 // Exports
 module.exports = code;
 
 /***/ }),
 
-/***/ "./src/styles.scss":
-/*!*************************!*\
-  !*** ./src/styles.scss ***!
-  \*************************/
+/***/ "./src/styles.css":
+/*!************************!*\
+  !*** ./src/styles.css ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3177,7 +3177,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["styles"], () => (__webpack_require__("./src/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["styles"], () => (__webpack_require__("./src/styles.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["styles"], () => (__webpack_require__("./src/styles.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
