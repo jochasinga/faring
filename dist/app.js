@@ -2974,12 +2974,13 @@ __webpack_require__.r(__webpack_exports__);
 var injectCSS = function injectCSS() {
   var link = document.createElement('link');
   link.type = "text/css";
-  link.rel = "stylesheet";
+  link.rel = "stylesheet"; // if (process.env.NODE_ENV == 'production') {
+  //   link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring@1.0/dist/styles.css"
+  // } else {
+  //   link.href = "./../dist/styles.css"
+  // }
 
-  if (false) {} else {
-    link.href = "./../dist/styles.css";
-  }
-
+  link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring@1.0/dist/styles.css";
   var head = document.head;
   head.appendChild(link);
 };
@@ -2995,7 +2996,7 @@ var injectCSS = function injectCSS() {
 /***/ ((module) => {
 
 // Module
-var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"button is-primary\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
+var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'button is-primary' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
 // Exports
 module.exports = code;
 
