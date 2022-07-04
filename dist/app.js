@@ -2950,7 +2950,7 @@ var initAlpine = function initAlpine() {
 /***/ ((module) => {
 
 // Module
-var code = "<script src=\"//unpkg.com/alpinejs\" defer></script>\n \n<div x-data=\"{ open: false }\">\n    <button @click=\"open = !open\">Toggle</button>\n    <p x-show=\"open\">Now you see me</p>\n</div>";
+var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
 // Exports
 module.exports = code;
 
