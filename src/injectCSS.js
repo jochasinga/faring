@@ -9,7 +9,7 @@ const injectCSS = () => {
   //   link.href = "./../dist/styles.css"
   // }
 
-  link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring@1.0/dist/styles.css"
+  link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring/dist/styles.css"
 
   var head = document.head
   head.appendChild(link)
