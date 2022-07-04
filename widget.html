@@ -1,5 +1,5 @@
 <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 <div x-data="{ open: false }">
-  <button @click="open = !open">Toggle</button>
+  <button :class="button is-primary" @click="open = !open">Toggle</button>
   <p x-show="open" @click.outside="open = false">Some content...</p>
 </div>
