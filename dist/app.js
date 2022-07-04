@@ -2996,7 +2996,7 @@ var injectCSS = function injectCSS() {
 /***/ ((module) => {
 
 // Module
-var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'bg-white rounded-xl' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
+var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
 // Exports
 module.exports = code;
 
