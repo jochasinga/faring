@@ -1,5 +1,50 @@
 <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
-<div x-data="{ open: false }">
-  <button :class="true ? 'button is-primary' : ''" @click="open = !open">Toggle</button>
-  <p x-show="open" @click.outside="open = false">Some content...</p>
+<div 
+  class="box p-6" 
+  x-data="{ next: false, back: true }"
+  style="height: 250px; border-left: 8px solid; border-color: blueviolet;"
+>
+  <div class="block" x-show="next" x-transition.duration.500ms>
+    <h1 class="block title is-4">What is the most fearsome character in Disney?</h1>
+    <h2 class="block subtitle" >Hint: She is a witch.</h2>
+  </div>
+
+  <div class="block" x-show="back" x-transition.duration.500ms>
+    <h1 class="block title is-4">What is the most fearsome fruit in Disney?</h1>
+    <h2 class="block subtitle" >Hint: ...</h2>
+
+    <div class="block control columns" style="width: 80%;">
+      <label class="radio column is-one-forth">
+        <input type="radio" name="answer">
+        Apple
+      </label>
+      <label class="radio column is-one-forth">
+        <input type="radio" name="answer">
+        Orange
+      </label>
+      <label class="radio column is-one-forth">
+        <input type="radio" name="answer">
+        Banana
+      </label>
+      <label class="radio column is-one-forth">
+        <input type="radio" name="answer">
+        I don't know
+      </label>
+    </div>
+  </div>
+
+  <div class="block control">
+    <button
+      class="button is-primary"
+      @click="back = !back; next = !next"
+      style="min-width: 6rem;"
+    >Back</button>
+    <button
+      class="button is-primary is-light"
+      @click="next = !next; back = !back"
+      style="min-width: 6rem;"
+    >Next</button>
+  </div>
+
+  <!-- <p x-show="open" @click.outside="open = false">Some content...</p> -->
 </div>

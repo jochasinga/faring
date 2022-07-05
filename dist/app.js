@@ -2974,13 +2974,13 @@ __webpack_require__.r(__webpack_exports__);
 var injectCSS = function injectCSS() {
   var link = document.createElement('link');
   link.type = "text/css";
-  link.rel = "stylesheet"; // if (process.env.NODE_ENV == 'production') {
-  //   link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring/dist/styles.css"
-  // } else {
-  //   link.href = "./../dist/styles.css"
-  // }
+  link.rel = "stylesheet";
 
-  link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring/dist/styles.css";
+  if (false) {} else {
+    link.href = "./../dist/styles.css";
+  } // link.href = "https://cdn.jsdelivr.net/gh/jochasinga/faring/dist/styles.css"
+
+
   var head = document.head;
   head.appendChild(link);
 };
@@ -2996,7 +2996,7 @@ var injectCSS = function injectCSS() {
 /***/ ((module) => {
 
 // Module
-var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div x-data=\"{ open: false }\">\n  <button :class=\"true ? 'button is-primary' : ''\" @click=\"open = !open\">Toggle</button>\n  <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p>\n</div>";
+var code = "<!-- <script src=\"//unpkg.com/alpinejs\" defer></script> -->\n<div \n  class=\"box p-6\" \n  x-data=\"{ next: false, back: true }\"\n  style=\"height: 250px; border-left: 8px solid; border-color: blueviolet;\"\n>\n  <div class=\"block\" x-show=\"next\" x-transition.duration.500ms>\n    <h1 class=\"block title is-4\">What is the most fearsome character in Disney?</h1>\n    <h2 class=\"block subtitle\" >Hint: She is a witch.</h2>\n  </div>\n\n  <div class=\"block\" x-show=\"back\" x-transition.duration.500ms>\n    <h1 class=\"block title is-4\">What is the most fearsome fruit in Disney?</h1>\n    <h2 class=\"block subtitle\" >Hint: ...</h2>\n\n    <div class=\"block control columns\" style=\"width: 80%;\">\n      <label class=\"radio column is-one-forth\">\n        <input type=\"radio\" name=\"answer\">\n        Apple\n      </label>\n      <label class=\"radio column is-one-forth\">\n        <input type=\"radio\" name=\"answer\">\n        Orange\n      </label>\n      <label class=\"radio column is-one-forth\">\n        <input type=\"radio\" name=\"answer\">\n        Banana\n      </label>\n      <label class=\"radio column is-one-forth\">\n        <input type=\"radio\" name=\"answer\">\n        I don't know\n      </label>\n    </div>\n  </div>\n\n  <div class=\"block control\">\n    <button\n      class=\"button is-primary\"\n      @click=\"back = !back; next = !next\"\n      style=\"min-width: 6rem;\"\n    >Back</button>\n    <button\n      class=\"button is-primary is-light\"\n      @click=\"next = !next; back = !back\"\n      style=\"min-width: 6rem;\"\n    >Next</button>\n  </div>\n\n  <!-- <p x-show=\"open\" @click.outside=\"open = false\">Some content...</p> -->\n</div>";
 // Exports
 module.exports = code;
 
