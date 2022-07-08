@@ -9,7 +9,29 @@ import widgetHTML from './../widget.html'
 
 const initAlpine = () => {
   window.Alpine = Alpine
-  Alpine.start()
+  document.addEventListener('alpine:init', () => {
+    window.Alpine.data('state', () => ({
+      next: false,
+      back: true,
+      progress: 33,
+      questions: [
+        {
+          text: "What is the most fearsome fruit in Disney?",
+          hint: "...",
+          choices: ['apple', 'orange', 'banana', 'I don\'t know'],
+        },
+        {
+          text: "What is the most ugly character in Disney?",
+          hint: "...",
+          choices: ['witch', 'cinderella', 'snow white', 'Not sure'],
+        },
+      ],
+      characters: ['witch', 'cinderella', 'snow white', 'Not sure'],
+      fruits: ['apple', 'orange', 'banana', 'I don\'t know'],
+    }))
+  })
+
+  window.Alpine.start()
 
   document.getElementById("app").innerHTML = widgetHTML
 }
